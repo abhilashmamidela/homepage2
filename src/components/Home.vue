@@ -38,7 +38,7 @@
                 <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, beatae, soluta provident ipsum sequi mollitia aut, eveniet sunt natus itaque alias nulla nam facere quas laudantium corrupti molestias praesentium."</p>
               </div>
 
-              <hr class="divider"></hr>
+              <hr class="divider">
 
               <div class="contentContainer">
                 <v-card-title>
@@ -78,7 +78,7 @@
                 <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, beatae, soluta provident ipsum sequi mollitia aut, eveniet sunt natus itaque alias nulla nam facere quas laudantium corrupti molestias praesentium."</p>
               </div>
 
-              <hr class="divider"></hr>
+              <hr class="divider">
 
               <div class="contentContainer">
                 <v-card-title>
@@ -117,7 +117,7 @@
                 <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, beatae, soluta provident ipsum sequi mollitia aut, eveniet sunt natus itaque alias nulla nam facere quas laudantium corrupti molestias praesentium."</p>
               </div>
 
-              <hr class="divider"></hr>
+              <hr class="divider">
 
               <div class="contentContainer">
                 <v-card-title>
@@ -139,7 +139,7 @@
 </v-layout>
 </v-layout>
 
-<hr class="divider1"></hr>
+<hr class="divider1">
 
 
 <!-- What We Provide -->
@@ -213,7 +213,7 @@
    
 </v-layout>
 
-<hr class="divider1"></hr>
+<hr class="divider1">
 
 <!-- second cards -->
 <!-- 4 -->
@@ -236,7 +236,7 @@
                 <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, beatae, soluta provident ipsum sequi mollitia aut, eveniet sunt natus itaque alias nulla nam facere quas laudantium corrupti molestias praesentium."</p>
               </div>
 
-              <hr class="divider"></hr>
+              <hr class="divider">
 
               <div class="contentContainer">
                 <v-card-title>
@@ -275,7 +275,7 @@
                 <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, beatae, soluta provident ipsum sequi mollitia aut, eveniet sunt natus itaque alias nulla nam facere quas laudantium corrupti molestias praesentium."</p>
               </div>
 
-              <hr class="divider"></hr>
+              <hr class="divider">
 
               <div class="contentContainer">
                 <v-card-title>
@@ -314,7 +314,7 @@
                 <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, beatae, soluta provident ipsum sequi mollitia aut, eveniet sunt natus itaque alias nulla nam facere quas laudantium corrupti molestias praesentium."</p>
               </div>
 
-              <hr class="divider"></hr>
+              <!-- <hr class="cardDotted"> --> <v-divider></v-divider>
 
               <div class="contentContainer">
                 <v-card-title>
@@ -351,7 +351,7 @@
     </v-layout>
      </v-container>
 
-<hr class="divider1"></hr>
+<hr class="divider1">
      
 
 
@@ -442,7 +442,7 @@ export default {
   width: 70px;
 }
 /*Divider styling*/
-hr.divider{
+.card .divider{
   border-top: 3px dotted seagreen;
   margin-left: 140px;
   width: 30%;
