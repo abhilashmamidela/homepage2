@@ -1,15 +1,16 @@
 <template>
   <v-app>
-	  <template>
 		  
   <v-container class="con1">
 	
-    <v-layout row wrap>
+    <v-layout row wrap pr-10 pt-5>
       <v-flex xs12 lg5 mb-3>
-        <v-expansion-panel popout  class="expansion" >
-          <v-expansion-panel-content>
+        <v-expansion-panel popout  class="expansion">
+          <v-expansion-panel-content style="background-color:#CFD8DC">
             <div slot="header">Profile</div>
-						<!-- 1 -->
+
+
+						<!-- Profile-->
             <v-card class="card">
 							 <v-layout wrap justify-space-around align-center pt-3>
                <v-avatar class="indigo">
@@ -51,12 +52,16 @@
       </v-flex>		
     </v-layout>
 
-		<!-- 2 -->
+
+
+		<!-- password-->
+
+
 
 		<v-layout row wrap>
       <v-flex xs12 lg5 mb-3>
-        <v-expansion-panel popout  class="expansion">
-          <v-expansion-panel-content>
+        <v-expansion-panel popout  class="expansion"  >
+          <v-expansion-panel-content style="background-color:#CFD8DC">
             <div slot="header">Password</div>
             <v-card>
 	         <div class="form">
@@ -65,8 +70,33 @@
 			     <input type="password"  name="Newpassword"     v-model="newpassword"      class="Newpassword"                 placeholder="New Password"/>
            <input type="password"  name="Confirmpassword" v-model="conpassword"  class="Confirmpassword"             placeholder="Confirm Password"/>
 
-					 
-					 <!-- <v-btn class="button" type="submit" @click="submit" :disabled="!valid">Submit</v-btn> -->
+					 <v-btn large type="submit" @click="submit" :disabled="!valid">Submit</v-btn>
+				 </v-form>
+				
+			 </div>
+            </v-card>
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-flex>		
+    </v-layout>
+
+		<!-- Email Notifications -->
+		<v-layout row wrap>
+      <v-flex xs12 lg5 mb-3>
+        <v-expansion-panel popout  class="expansion"  >
+          <v-expansion-panel-content style="background-color:#CFD8DC">
+            <div slot="header">Email Notifications</div>
+            <v-card>
+	         <div class="form">
+				 <v-form class="registerform" v-model="validx" method="post" v-on:submit.prevent="getFormValues">
+					 <v-checkbox v-model="enabled" hide-details class="shrink mr-2"></v-checkbox>
+           <v-text-field label="A payout has been sold" :disabled="!enabled"></v-text-field>
+           <v-checkbox v-model="enabled" hide-details class="shrink mr-2"></v-checkbox>
+           <v-text-field label="My product is sold" :disabled="!enabled"></v-text-field> 
+					 <v-checkbox v-model="enabled" hide-details class="shrink mr-2"></v-checkbox>
+           <v-text-field label="An author i followed liked the product" :disabled="!enabled"></v-text-field>          
+
+					 <v-btn large type="submit" @click="submit" :disabled="!valid">Submit</v-btn>
 				 </v-form>
 				
 			 </div>
@@ -77,9 +107,7 @@
     </v-layout>
 
 		
-		
   </v-container>
-</template>
   </v-app>
 </template>
 
@@ -97,6 +125,8 @@ export default {
 			newpassword:'',
 			conpassword:'',
 			validx:true,
+			includeFiles: true,
+			enabled: false
 		},
 		{
 			ex11 :['blue']
@@ -143,9 +173,11 @@ export default {
 
  <style scoped>
 
+
+
  
 .expansion{
-	 width: 800px;
+	 /* width: 800px; */
 	 /* background-color:#CFD8DC; */
 	
 	
