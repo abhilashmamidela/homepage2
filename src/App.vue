@@ -79,7 +79,11 @@ export default {
       menuItems:[
         {icon:'face', title:'Features', link:'/features'},
         {icon:'note', title:'Pricing',link:'/pricing'},
-        {icon:'contact_phone', title:'Contact Us',link:'/contactus'}
+        {icon:'contact_phone', title:'Contact Us',link:'/contactus'},
+        {icon:'face', title:'Sign Up',link:'/signup'},
+        // {icon:'lock_open', title:'Sign in',link:'/signin'}
+
+
       ],
      
       

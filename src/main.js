@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Vuetify from 'vuetify'
+import * as firebase from 'firebase'
+import { store } from './store/index'
 import 'vuetify/dist/vuetify.min.css'
 
 Vue.use(Vuetify, { theme: {
@@ -20,5 +22,16 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  render: h => h(App)
+  store,
+  render: h => h(App),
+  created() {
+  firebase.initializeApp({
+    apiKey: 'AIzaSyDs-_RzcOymobOD7Pz30HXgTFDzSEPVLjA',
+    authDomain: 'homepage2-7399b.firebaseapp.com',
+    databaseURL: 'https://homepage2-7399b.firebaseio.com',
+    projectId: 'homepage2-7399b',
+    storageBucket: 'homepage2-7399b.appspot.com',
+
+  })
+  }
 })

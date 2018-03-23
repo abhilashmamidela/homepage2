@@ -38,7 +38,7 @@
                 <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, beatae, soluta provident ipsum sequi mollitia aut, eveniet sunt natus itaque alias nulla nam facere quas laudantium corrupti molestias praesentium."</p>
               </div>
 
-              <hr class="divider"></hr>
+              <hr class="divider">
 
               <div class="contentContainer">
                 <v-card-title>
@@ -78,7 +78,7 @@
                 <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, beatae, soluta provident ipsum sequi mollitia aut, eveniet sunt natus itaque alias nulla nam facere quas laudantium corrupti molestias praesentium."</p>
               </div>
 
-              <hr class="divider"></hr>
+              <hr class="divider">
 
               <div class="contentContainer">
                 <v-card-title>
@@ -117,7 +117,7 @@
                 <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, beatae, soluta provident ipsum sequi mollitia aut, eveniet sunt natus itaque alias nulla nam facere quas laudantium corrupti molestias praesentium."</p>
               </div>
 
-              <hr class="divider"></hr>
+              <hr class="divider">
 
               <div class="contentContainer">
                 <v-card-title>
@@ -139,7 +139,7 @@
 </v-layout>
 </v-layout>
 
-<hr class="divider1"></hr>
+<hr class="divider1">
 
 
 <!-- What We Provide -->
@@ -213,7 +213,7 @@
    
 </v-layout>
 
-<hr class="divider1"></hr>
+<hr class="divider1">
 
 <!-- second cards -->
 <!-- 4 -->
@@ -236,7 +236,7 @@
                 <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, beatae, soluta provident ipsum sequi mollitia aut, eveniet sunt natus itaque alias nulla nam facere quas laudantium corrupti molestias praesentium."</p>
               </div>
 
-              <hr class="divider"></hr>
+              <hr class="divider">
 
               <div class="contentContainer">
                 <v-card-title>
@@ -275,7 +275,7 @@
                 <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, beatae, soluta provident ipsum sequi mollitia aut, eveniet sunt natus itaque alias nulla nam facere quas laudantium corrupti molestias praesentium."</p>
               </div>
 
-              <hr class="divider"></hr>
+              <hr class="divider">
 
               <div class="contentContainer">
                 <v-card-title>
@@ -314,7 +314,7 @@
                 <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, beatae, soluta provident ipsum sequi mollitia aut, eveniet sunt natus itaque alias nulla nam facere quas laudantium corrupti molestias praesentium."</p>
               </div>
 
-              <hr class="divider"></hr>
+              <!-- <hr class="cardDotted"> --> <v-divider></v-divider>
 
               <div class="contentContainer">
                 <v-card-title>
@@ -338,20 +338,35 @@
 
 
 <!-- see more 2 -->
-<v-layout column pt-6>
-      <v-flex text-xs-center pt-4 >
-        <v-btn 
-        depressed 
-        color="blue"
-        class="see_more"
-        large
-        
-        >See more</v-btn>
-      </v-flex>
-    </v-layout>
+<v-layout pt-4>
+      <v-footer height="auto">
+    <v-card
+      flat
+      tile
+      class="indigo lighten-1 white--text text-xs-center"
+    >
+      <v-card-text>
+        <v-btn
+          v-for="icon in icons"
+          :key="icon"
+          icon
+          class="mx-3 white--text"
+        >
+          <v-icon size="24px">{{ icon }}</v-icon>
+        </v-btn>
+      </v-card-text>
+      <v-card-text class="white--text pt-0">
+        Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      </v-card-text>
+      <v-card-text class="white--text">
+        &copy;2018 — <strong>Vuetify</strong>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+ </v-layout>
      </v-container>
 
-<hr class="divider1"></hr>
+<hr class="divider1">
      
 
 
@@ -360,36 +375,20 @@
 
 
 
-<v-container grid-list-x1 fluid>
-    <v-footer height="auto" class="grey darken-3">
-    <v-layout row wrap>
-      <v-btn
-        color="white"
-        flat>
-        
-      </v-btn>
-      <v-flex xs12 py-3 text-xs-center white--text>
-        &copy;2018 — <strong>Contact Us</strong>
-      </v-flex>
-    </v-layout>
-  </v-footer>
-  </v-container>
+
   </v-app>
 </template>
 
 <script>
 export default {
-  data(){
-      return{
-
-      }
-  }
+       data: () => ({
+      icons: ['fab fa-facebook', 'fab fa-twitter', 'fab fa-google-plus', 'fab fa-linkedin', 'fab fa-instagram']
+    })
 }
 </script>
 
 
 <style>
-
 .see_more1{
   padding:70px;
   text-decoration: unset;
@@ -442,7 +441,7 @@ export default {
   width: 70px;
 }
 /*Divider styling*/
-hr.divider{
+.card .divider{
   border-top: 3px dotted seagreen;
   margin-left: 140px;
   width: 30%;
@@ -481,29 +480,22 @@ p{
   padding-top: 35px;
   
 }
-
 .Customer_reviews .h2{
-
   font-size: 28px;
   padding-left: 470px;
   padding-top: 35px;
   /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-
 }
-
 .what_we{
   padding: 120px 70px 70px 70px;
 } 
-
 .what_we .h3{
   padding-left:420px;
   font-size:28px;
   /* font-family: 'Courier New', Courier, monospace; */
 }
-
 .divider1{
   margin-top: 50px;
   border-top: 3px double #8c8b8b;
 }
 </style>
-
