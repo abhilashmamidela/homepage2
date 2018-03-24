@@ -1,10 +1,16 @@
 <template>
   <v-app>
+		
+        
+
+
 		  
   <v-container class="con1">
+		
+  <h1 class="profile1" style="text-align:left">Profile</h1>
+		
 	
-    <v-layout row wrap pr-10 pt-5>
-      <v-flex xs12 lg5 mb-3>
+        <v-layout pt-3>
         <v-expansion-panel popout  class="expansion">
           <v-expansion-panel-content style="background-color:#CFD8DC">
             <div slot="header">Profile</div>
@@ -49,8 +55,8 @@
             </v-card>
           </v-expansion-panel-content>
         </v-expansion-panel>
-      </v-flex>		
-    </v-layout>
+				</v-layout>
+   
 
 
 
@@ -58,12 +64,12 @@
 
 
 
-		<v-layout row wrap>
-      <v-flex xs12 lg5 mb-3>
-        <v-expansion-panel popout  class="expansion"  >
+		    <v-layout pt-2>
+        <v-expansion-panel popout  class="expansion" pt-3 >
           <v-expansion-panel-content style="background-color:#CFD8DC">
             <div slot="header">Password</div>
             <v-card>
+							
 	         <div class="form">
 				 <v-form class="registerform" v-model="validx" method="post" v-on:submit.prevent="getFormValues">
 					 <input type="password"  name="Currentpassword" v-model="password"     class="Currentpassword"             placeholder="Current Password"/>
@@ -77,12 +83,12 @@
             </v-card>
           </v-expansion-panel-content>
         </v-expansion-panel>
-      </v-flex>		
-    </v-layout>
+				
+				</v-layout>
+      
 
 		<!-- Email Notifications -->
-		<v-layout row wrap>
-      <v-flex xs12 lg5 mb-3>
+		    <v-layout pt-2>
         <v-expansion-panel popout  class="expansion"  >
           <v-expansion-panel-content style="background-color:#CFD8DC">
             <div slot="header">Email Notifications</div>
@@ -103,8 +109,7 @@
             </v-card>
           </v-expansion-panel-content>
         </v-expansion-panel>
-      </v-flex>		
-    </v-layout>
+     </v-layout>
 
 		
   </v-container>
@@ -229,6 +234,10 @@ export default {
 
 .card{
 	background-color: #CFD8DC;
+}
+
+.profile1{
+	padding-left: 33px;
 }
 
 

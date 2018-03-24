@@ -10,6 +10,7 @@ import Profile from '../components/User/Profile.vue'
 
 
 
+
 Vue.use(Router)
 
 export default new Router({
@@ -49,7 +50,8 @@ export default new Router({
   path:'/profile',
   name:'Profile',
   component:Profile
-}
+},
+
 
   ]
 })
