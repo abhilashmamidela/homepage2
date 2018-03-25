@@ -24,7 +24,7 @@
 
 <!--1-->
 <v-layout row>
-        <v-flex xs12 align-end flexbox pt-4>
+        <v-flex xs12  align-end flexbox pt-4>
         
           <div class="parentContainer">
               
