@@ -34,7 +34,7 @@ export default new Router({
     },
     {
     path:'/contactus',
-    name:'Contactuspager',
+    name:'Contactuspager21323423423234',
     component:Contact
 
     },
