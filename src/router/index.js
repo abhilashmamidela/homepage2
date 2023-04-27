@@ -47,7 +47,7 @@ export default new Router({
     },
    
 {
-  path:'/profile',
+  path:'/profile12323443434343434',
   name:'Profile',
   component:Profile
 },
